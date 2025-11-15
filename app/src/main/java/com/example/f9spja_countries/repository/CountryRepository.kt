@@ -22,10 +22,10 @@ class CountryRepository(private val countryDao: CountryDao) {
 
     suspend fun deleteCountry(country: Country) = countryDao.deleteCountry(country)
 
-    suspend fun visitCountry(countryId: Long) {
+    suspend fun visitCountry(country: Country) {
         val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
-        countryDao.markAsVisited(countryId, currentDate)
+        countryDao.markAsVisited(country, currentDate)
     }
 
-    suspend fun makeCountryUnvisited(countryId: Long) = countryDao.markAsUnvisited(countryId)
+    suspend fun makeCountryUnvisited(country: Country) = countryDao.markAsUnvisited(country)
 }

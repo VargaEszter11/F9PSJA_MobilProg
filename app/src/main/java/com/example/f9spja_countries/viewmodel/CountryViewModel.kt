@@ -58,15 +58,15 @@ class CountryViewModel(private val repository: CountryRepository) : ViewModel() 
         }
     }
 
-    fun visitCountry(countryId: Long) {
+    fun visitCountry(country: Country) {
         viewModelScope.launch {
-            repository.visitCountry(countryId)
+            repository.visitCountry(country)
         }
     }
 
-    fun makeCountryUnvisited(countryId: Long) {
+    fun makeCountryUnvisited(country: Country) {
         viewModelScope.launch {
-            repository.makeCountryUnvisited(countryId)
+            repository.makeCountryUnvisited(country)
         }
     }
 }

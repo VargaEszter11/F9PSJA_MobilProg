@@ -1,9 +1,9 @@
 package com.example.f9spja_countries.ui.screens
 
-import androidx.compose.animation.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
@@ -139,16 +139,16 @@ fun CountryListScreen(
                             }
                         }
 
-                        val countriesToShow = if (showVisitedCountries) visitedCountries else unvisitedCountries
+                        val countriesToShow: List<Country> = if (showVisitedCountries) visitedCountries else unvisitedCountries
                         items(countriesToShow) { country ->
                             CountryCard(
                                 country = country,
                                 onEditClick = { countryToEdit = country },
                                 onVisitClick = { countryToVisit ->
                                     if (countryToVisit.visited) {
-                                        viewModel.makeCountryUnvisited(countryToVisit.id)
+                                        viewModel.makeCountryUnvisited(countryToVisit)
                                     } else {
-                                        viewModel.visitCountry(countryToVisit.id)
+                                        viewModel.visitCountry(countryToVisit)
                                     }
                                 },
                                 onDeleteClick = { showDeleteConfirmation = country },

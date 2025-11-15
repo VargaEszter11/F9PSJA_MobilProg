@@ -1,6 +1,7 @@
 package com.example.f9spja_countries.data
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity(tableName = "countries")

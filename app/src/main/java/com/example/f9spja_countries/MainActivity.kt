@@ -2,7 +2,6 @@ package com.example.f9spja_countries;
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
@@ -15,8 +14,7 @@ import com.example.f9spja_countries.repository.CountryRepository
 import com.example.f9spja_countries.ui.screens.CountryListScreen
 import com.example.f9spja_countries.viewmodel.CountryViewModel
 import com.example.f9spja_countries.ui.theme.F9PSJA_CountriesTheme
-
-
+import androidx.activity.compose.setContent
 
 class MainActivity : ComponentActivity() {
 

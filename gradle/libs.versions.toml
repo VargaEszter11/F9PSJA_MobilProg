@@ -1,4 +1,5 @@
 [versions]
+activityCompose = "1.11.0"
 agp = "8.13.1"
 kotlin = "2.0.21"
 coreKtx = "1.17.0"
@@ -11,9 +12,13 @@ roomCommonJvm = "2.8.3"
 roomKtx = "2.8.3"
 material3 = "1.4.0"
 cameraCore = "1.5.1"
+ksp="1.9.22-1.0.17"
 
 [libraries]
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -28,4 +33,5 @@ androidx-camera-core = { group = "androidx.camera", name = "camera-core", versio
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
