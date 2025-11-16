@@ -27,8 +27,8 @@ interface CountryDao {
     suspend fun deleteCountry(country: Country)
 
     @Query("UPDATE countries SET visited = 1, visitDate = :visitDate WHERE id = :countryId")
-    suspend fun markAsVisited(countryId: Country, visitDate: String)
+    suspend fun markAsVisited(countryId: Long, visitDate: String)
 
     @Query("UPDATE countries SET visited = 0, visitDate = NULL WHERE id = :countryId")
-    suspend fun markAsUnvisited(countryId: Country)
+    suspend fun markAsUnvisited(countryId: Long)
 }

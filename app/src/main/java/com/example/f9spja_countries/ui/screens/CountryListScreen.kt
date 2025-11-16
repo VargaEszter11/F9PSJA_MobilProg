@@ -146,9 +146,9 @@ fun CountryListScreen(
                                 onEditClick = { countryToEdit = country },
                                 onVisitClick = { countryToVisit ->
                                     if (countryToVisit.visited) {
-                                        viewModel.makeCountryUnvisited(countryToVisit)
+                                        viewModel.makeCountryUnvisited(countryToVisit.id)
                                     } else {
-                                        viewModel.visitCountry(countryToVisit)
+                                        viewModel.visitCountry(countryToVisit.id)
                                     }
                                 },
                                 onDeleteClick = { showDeleteConfirmation = country },

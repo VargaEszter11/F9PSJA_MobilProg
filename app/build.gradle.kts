@@ -63,9 +63,9 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation("androidx.room:room-runtime:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1") // Optional for Kotlin coroutines support
-    ksp("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-runtime:2.8.3")
+    implementation("androidx.room:room-ktx:2.8.3") // Optional for Kotlin coroutines support
+    ksp("androidx.room:room-compiler:2.8.3")
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.camera.core)
 
